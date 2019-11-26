@@ -1,4 +1,4 @@
-## React Pinterest Layout with Mansonry
+## React Pinterest Layout with Masonry
 
 ![Screenshot](https://user-images.githubusercontent.com/20074961/69678674-4ae80280-10b7-11ea-9258-029682337c33.png)
 
