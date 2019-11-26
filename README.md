@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## React Pinterest Layout with Mansonry
+
+![Screenshot](https://user-images.githubusercontent.com/20074961/69678674-4ae80280-10b7-11ea-9258-029682337c33.png)
 
 ## Available Scripts
 
