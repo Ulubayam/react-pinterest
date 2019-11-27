@@ -7,10 +7,22 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       images: []
+      // myClassArray : [
+      //  "grid-item grid-item--width2",
+      //  "grid-item grid-item--width3", 
+      //  "grid-item grid-item--width4",
+      //  "grid-item grid-item--height2", 
+      //  "grid-item grid-item--height3", 
+      //  "grid-item grid-item--height4",
+      // ],
+      // randomItem: ""
     };
   }
   
   getData = (topic) => {
+    // this.setState({
+    //   randomItem: this.state.myClassArray[Math.floor(Math.random()*this.state.myClassArray.length)]
+    // });
     axios
       .get(
         `https://api.unsplash.com/search/photos?query=${topic}&per_page=20`,
@@ -36,35 +48,38 @@ export default class App extends React.Component {
     
     return (
       <div>
-        <div className="container">
-          <div className="button-wrapper mt-5">
+        <div className="container mt-5">
+          <div className="button-wrapper">
             <button
-              className="btn btn-outline-warning btn-large"
+            type="button"
+              className="btn btn-orange-moon btn-large text-uppercase"
               onClick={() =>this.getData("Autumn")}
             >
               Autumn
             </button>
             <button
-              className="btn btn-outline-dark btn-large"
+             type="button"
+              className="btn btn-ultra-voilet btn-large text-uppercase"
               onClick={() =>this.getData("Cliff")}
             >
               Cliff
             </button>
             <button
-              className="btn btn-outline-info btn-large"
+             type="button"
+              className="btn btn-cool-blues btn-large text-uppercase"
               onClick={() =>this.getData("Ocean")}
             >
               Ocean
             </button>
           </div>
           <div className="grid">
-          <div className="grid-sizer"></div>
+          <div className="static-banner"></div>
           {
                 this.state.images.map((image, i) => {
                   return  (
                  
                   <div className="grid-item" key={i}>
-                   <img src={image.urls.small}/>
+                   <img src={image.urls.small} alt={image.alt_description}/>
                   </div> 
                  
                 )})
