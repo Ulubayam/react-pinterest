@@ -7,6 +7,7 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       images: []
+      // ClassName Array
       // myClassArray : [
       //  "grid-item grid-item--width2",
       //  "grid-item grid-item--width3", 
@@ -20,6 +21,7 @@ export default class App extends React.Component {
   }
   
   getData = (topic) => {
+    // Set random className
     // this.setState({
     //   randomItem: this.state.myClassArray[Math.floor(Math.random()*this.state.myClassArray.length)]
     // });
